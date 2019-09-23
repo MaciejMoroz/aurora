@@ -1,0 +1,175 @@
+html {
+  scroll-behavior: smooth;
+  font-size: $base-unit;
+  font-family: $font-1;
+  @media (max-width: $bpoint-mob) {
+    font-size: 12px;
+  }
+  @media (min-width: $bpoint-desklg) {
+    font-size: 24px;
+  }
+
+  box-sizing: border-box;
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-size: $font-size-body;
+  font-family: $font-1;
+  font-weight: $fw-normal;
+  line-height: 1.4;
+  color: $color-1;
+  min-width: $cont-min-width;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $color-5;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+.h1 {
+  font-size: $font-size-h1;
+  margin-bottom: 0.5 * $space;
+}
+h2,
+.h2 {
+  font-size: $font-size-h2;
+  margin-bottom: 0.5 * $space;
+}
+h3,
+.h3 {
+  font-size: $font-size-h3;
+  margin-bottom: 0.5 * $space;
+}
+
+p {
+  font-size: $font-size-body;
+  margin: 0.5 * $space 0;
+}
+input {
+  font-family: $font-1;
+  &::placeholder {
+    font-family: $font-2;
+  }
+  border: none;
+  background: none;
+  padding: 0;
+  &:focus {
+    box-shadow: 0 3px 5px $color-1;
+  }
+  .is-submitted &:invalid {
+    box-shadow: 0 3px 5px $color-error;
+    + .form-error-msg {
+      visibility: visible;
+    }
+  }
+}
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.btn {
+  height: 42px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-color: $color-4;
+  margin: 0 0 0 0;
+  background: linear-gradient(90deg, $black 50%, $color-5 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: $black;
+  position: relative;
+  color: $black; /*For IE*/
+  &--border-left {
+    border-left: 1px solid $color-4;
+    margin: 0 -2px 0 0;
+  }
+  &--border-right {
+    border-right: 1px solid $color-4;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, $color-5 50%, transparent 50%);
+    z-index: -1;
+  }
+  &,
+  &:after {
+    background-size: 300%;
+    background-position: 100%;
+    transition: 1s, font-size 0.2s;
+  }
+  &:hover,
+  &:hover:after {
+    background-position: 0;
+    color: $black; /*For IE*/
+    // font-weight: $fw-bold;
+  }
+}
+
+.wrapper {
+  padding-left: $base-unit;
+  padding-right: $base-unit;
+  position: relative;
+
+  @include min-width($bpoint-tab) {
+    padding-left: $space;
+    padding-right: $space;
+  }
+
+  @include min-width($bpoint-desk) {
+    max-width: $cont-max-width;
+    margin: 0 auto;
+  }
+  @include min-width($bpoint-desk) {
+    max-width: $cont-max-width;
+    margin: 0 auto;
+  }
+}
+
+.component {
+  margin-top: $space;
+  margin-bottom: $space;
+}
+
+.hide-mob {
+  display: none;
+  @include min-width($bpoint-desk) {
+    display: unset;
+  }
+}
+
+.line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: $color-4;
+}
+.fake-bold:hover {
+  text-shadow: 1px 0 0 currentColor;
+}
