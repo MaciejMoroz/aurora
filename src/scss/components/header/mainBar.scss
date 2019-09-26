@@ -1,0 +1,127 @@
+.mainBar {
+  &__content {
+    z-index: 10;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__tools {
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+      @include min-width($bpoint-desk) {
+        justify-content: space-between;
+      }
+
+      &__search {
+        margin: 0 $base-unit;
+        &__icon {
+          cursor: pointer;
+          width: 26px;
+          height: 31px;
+          display: block;
+          .open-searchBox & {
+            display: none;
+          }
+        }
+        @include min-width($bpoint-desk) {
+          display: none;
+        }
+      }
+      &__searchBox {
+        position: absolute;
+        top: 0;
+        transition: 0.3s;
+        opacity: 0;
+        left: 0;
+        width: 100%;
+        .open-searchBox & {
+          display: block;
+          opacity: 1;
+          top: 70px;
+        }
+        @include min-width($bpoint-desk) {
+          display: block;
+          position: relative;
+          top: 0;
+          max-width: 480px;
+          opacity: 1;
+        }
+        &__searchInput {
+          width: 100%;
+          padding-right: 55px;
+          padding-left: 20px;
+        }
+        &__searchBtn {
+          position: absolute;
+          border: none;
+          right: 50px;
+          top: 0;
+          fill: $color-5;
+          @include min-width($bpoint-desk) {
+            right: 0;
+          }
+        }
+        .btn__close {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          @include min-width($bpoint-desk) {
+            display: none;
+          }
+        }
+      }
+
+      &__basket {
+        cursor: pointer;
+        margin: 0 $base-unit;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        &__icon {
+          float: left;
+        }
+        &__text {
+          font-weight: bold;
+          margin: 0 10px;
+          white-space: nowrap;
+          height: 100%;
+        }
+
+        &__counter {
+          position: absolute;
+          right: -10px;
+          top: 20px;
+          width: auto;
+          height: 20px;
+          border-radius: 10px;
+          background-color: $color-5;
+          @include min-width($bpoint-desk) {
+            right: 90px;
+          }
+          span {
+            color: $color-2;
+            padding: 2px 6px;
+            font-size: 11px;
+          }
+        }
+      }
+      &__hamburger {
+        margin: 3px 0 0 $base-unit;
+        @include min-width($bpoint-desk) {
+          display: none;
+        }
+
+        span {
+          display: block;
+          width: 24px;
+          height: 3px;
+          margin: 5px 0 5px 0;
+          background-color: $black;
+        }
+      }
+    }
+  }
+}

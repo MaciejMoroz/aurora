@@ -1,17 +1,19 @@
 <div class="wrapper">
-  <header class="header component">
-    <div class="header__content">
-      <div class="header__content__logo">
-        <img
-          src="img/logo__aurora-box.png"
-          alt="aurora box logo"
-          class="header__content__logo__img"
-        />
-      </div>
-      <div class="header__content__tools">
-        <div class="header__content__tools__search">
+  <section class="mainBar component">
+    <div class="mainBar__content">
+      <h1>
+        <a href="#" class="mainBar__content__logo">
+          <img
+            src="img/logo__aurora-box.png"
+            alt="aurora box logo"
+            class="mainBar__content__logo__img"
+          />
+        </a>
+      </h1>
+      <div class="mainBar__content__tools">
+        <div class="mainBar__content__tools__search" data-search-btn>
           <svg
-            class="header__content__tools__search__icon"
+            class="mainBar__content__tools__search__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="15.002"
             height="15.002"
@@ -24,20 +26,35 @@
             />
           </svg>
         </div>
-        <div class="header__content__tools__searchBox">
+        <div class="mainBar__content__tools__searchBox" data-search-box>
           <input
             type="text"
             placeholder="co chcesz kupic?"
-            class="inpt header__content__tools__searchBox__searchInput"
+            class="inpt mainBar__content__tools__searchBox__searchInput"
           />
-          <button class="btn__close">
+          <button class="inpt mainBar__content__tools__searchBox__searchBtn">
+            <svg
+              class="mainBar__content__tools__search__iconBtn"
+              xmlns="http://www.w3.org/2000/svg"
+              width="15.002"
+              height="15.002"
+              viewBox="0 0 15.002 15.002"
+            >
+              <path
+                id="icon__lensBtn"
+                d="M1310.012,102.709a5.871,5.871,0,1,0-.8,8.967,1.245,1.245,0,0,0,.335.622l3.333,3.332a1.24,1.24,0,0,0,1.754-1.754l-3.333-3.333a1.229,1.229,0,0,0-.622-.335A5.876,5.876,0,0,0,1310.012,102.709Zm-1.052,7.25a4.382,4.382,0,1,1,0-6.2A4.388,4.388,0,0,1,1308.959,109.959Z"
+                transform="translate(-1299.993 -100.993)"
+              />
+            </svg>
+          </button>
+          <button class="btn__close" data-closeBtn>
             <span class="btn__close--1"></span>
             <span class="btn__close--2"></span>
           </button>
         </div>
-        <div class="header__content__tools__basket">
+        <div class="mainBar__content__tools__basket" data-basket-btn>
           <svg
-            class="header__content__tools__basket__icon"
+            class="mainBar__content__tools__basket__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="31"
@@ -49,16 +66,22 @@
               transform="translate(-1469 -99.999)"
             />
           </svg>
-          <div class="header__content__tools__basket__counter">
-            <span>10</span>
+          <p class="mainBar__content__tools__basket__text hide-mob">
+            Twój Koszyk
+          </p>
+
+          <div
+            class="mainBar__content__tools__basket__counter basketCounterBox--js"
+          >
+            <span data-basketCounter="basketCounter"></span>
           </div>
         </div>
-        <div class="header__content__tools__hamburger">
+        <div class="mainBar__content__tools__hamburger ">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 </div>

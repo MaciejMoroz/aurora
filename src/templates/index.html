@@ -12,8 +12,15 @@
   </head>
 
   <body>
-    {% include "components/topBar.html" %} {% include "components/header.html"
-    %}
+    <!-- components -->
+    {% include "components/header/header.html" %}
+    <!-- menus -->
+    {% include "components/basketMenu.html" %}
+
+    <!--  -->
+    {% include "components/whiteSpace.html" %}
     <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/search.js" type="text/javascript"></script>
+    <script src="js/basketMenu.js" type="text/javascript"></script>
   </body>
 </html>

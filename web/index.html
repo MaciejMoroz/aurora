@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <!-- components -->
+    <header class="header">
+  <div class="wrapper">
   <div class="topBar">
     <div class="topBar__contact">
       <a class="link" href="tel:293939098">
@@ -94,20 +96,24 @@
   </div>
 </div>
 <span class="line"></span>
- <div class="wrapper">
-  <header class="header component">
-    <div class="header__content">
-      <div class="header__content__logo">
-        <img
-          src="img/logo__aurora-box.png"
-          alt="aurora box logo"
-          class="header__content__logo__img"
-        />
-      </div>
-      <div class="header__content__tools">
-        <div class="header__content__tools__search">
+
+  <!--  -->
+  <div class="wrapper">
+  <section class="mainBar component">
+    <div class="mainBar__content">
+      <h1>
+        <a href="#" class="mainBar__content__logo">
+          <img
+            src="img/logo__aurora-box.png"
+            alt="aurora box logo"
+            class="mainBar__content__logo__img"
+          />
+        </a>
+      </h1>
+      <div class="mainBar__content__tools">
+        <div class="mainBar__content__tools__search" data-search-btn>
           <svg
-            class="header__content__tools__search__icon"
+            class="mainBar__content__tools__search__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="15.002"
             height="15.002"
@@ -120,20 +126,35 @@
             />
           </svg>
         </div>
-        <div class="header__content__tools__searchBox">
+        <div class="mainBar__content__tools__searchBox" data-search-box>
           <input
             type="text"
             placeholder="co chcesz kupic?"
-            class="inpt header__content__tools__searchBox__searchInput"
+            class="inpt mainBar__content__tools__searchBox__searchInput"
           />
-          <button class="btn__close">
+          <button class="inpt mainBar__content__tools__searchBox__searchBtn">
+            <svg
+              class="mainBar__content__tools__search__iconBtn"
+              xmlns="http://www.w3.org/2000/svg"
+              width="15.002"
+              height="15.002"
+              viewBox="0 0 15.002 15.002"
+            >
+              <path
+                id="icon__lensBtn"
+                d="M1310.012,102.709a5.871,5.871,0,1,0-.8,8.967,1.245,1.245,0,0,0,.335.622l3.333,3.332a1.24,1.24,0,0,0,1.754-1.754l-3.333-3.333a1.229,1.229,0,0,0-.622-.335A5.876,5.876,0,0,0,1310.012,102.709Zm-1.052,7.25a4.382,4.382,0,1,1,0-6.2A4.388,4.388,0,0,1,1308.959,109.959Z"
+                transform="translate(-1299.993 -100.993)"
+              />
+            </svg>
+          </button>
+          <button class="btn__close" data-closeBtn>
             <span class="btn__close--1"></span>
             <span class="btn__close--2"></span>
           </button>
         </div>
-        <div class="header__content__tools__basket">
+        <div class="mainBar__content__tools__basket" data-basket-btn>
           <svg
-            class="header__content__tools__basket__icon"
+            class="mainBar__content__tools__basket__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="31"
@@ -145,20 +166,234 @@
               transform="translate(-1469 -99.999)"
             />
           </svg>
-          <div class="header__content__tools__basket__counter">
-            <span>10</span>
+          <p class="mainBar__content__tools__basket__text hide-mob">
+            Twój Koszyk
+          </p>
+
+          <div
+            class="mainBar__content__tools__basket__counter basketCounterBox--js"
+          >
+            <span data-basketCounter="basketCounter"></span>
           </div>
         </div>
-        <div class="header__content__tools__hamburger">
+        <div class="mainBar__content__tools__hamburger ">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
     </div>
-  </header>
+  </section>
 </div>
 
+  <!--  -->
+  <nav class="nav">
+  <div class="wrapper">
+    <ul class="nav-menu">
+      <li class="nav-menu__main">
+        <a href="#">Kategorie</a>
+        <ul class="nav-menu__second-lvl shadow">
+          <li>
+            <a href="#">Biustonosze</a>
+            <ul class="nav-menu__third-lvl shadow">
+              <li><a href="#">Bardotka</a></li>
+              <li><a href="#">Minimizer</a></li>
+              <li><a href="#">Multiway</a></li>
+              <li><a href="#">Push-up</a></li>
+              <li><a href="#">Soft</a></li>
+              <li><a href="#">Sportowe</a></li>
+              <li><a href="#">Usztywniane</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Body</a></li>
+          <li><a href="#">Majtki</a></li>
+          <li><a href="#">Stroje kąpielowe</a></li>
+          <li><a href="#">Bielizna erotyczna</a></li>
+          <li><a href="#">Stroje sporotwe</a></li>
+          <li><a href="#">Bielizna wieczorowa</a></li>
+        </ul>
+      </li>
+      <li class="nav-menu__main"><a href="#">Nowości</a></li>
+      <li class="nav-menu__main"><a href="#">Promocje</a></li>
+      <li class="nav-menu__main"><a href="#">Wyprzedaże</a></li>
+      <li class="nav-menu__main"><a href="#">Kolekcje Sezony</a></li>
+      <li class="nav-menu__main"><a href="#">Nasza oferta</a></li>
+      <li class="nav-menu__main"><a href="#">Trendy 2018</a></li>
+      <li class="nav-menu__main"><a href="#">Blog</a></li>
+      <li class="nav-menu__main"><a href="#">Kontakt</a></li>
+    </ul>
+
+    <span class="line"></span>
+  </div>
+</nav>
+
+</header>
+
+    <!-- menus -->
+    <div class="basket">
+  <div class="basket__content shadow">
+    <div class="component--sm">
+      <button class="btn__close basket__close" data-closeBasketBtn>
+        <span class="btn__close--1"></span>
+        <span class="btn__close--2"></span>
+      </button>
+      <p
+        class="basket__content__text
+  basket__content__text--sm"
+      >
+        Produkty w koszyku:
+        <span data-basketCounter="basketCounter"></span>
+      </p>
+      <p class="basket__content__text">
+        Kwota do zapłaty:
+        <span data-basketToPay="basketToPay"></span>
+      </p>
+    </div>
+    <span class="line"></span>
+    <div class="product">
+      <img class="product__img" src="/img/products/1.png" alt="product img" />
+      <div class="product__desc">
+        <p class="product__desc__name">
+          biustonosz push-up line mos 12
+        </p>
+        <p class="product__desc__price">59.00 zł</p>
+        <div class="product__desc__quantity">
+          <p class="product__desc__quantity__txt">ilość:</p>
+          <input type="number" class="product__desc__quantity__inp" />
+          <div class="product__desc__quantity__tools">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+              >
+                <image
+                  id="icon__delete"
+                  width="12"
+                  height="16"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAABHNCSVQICAgIfAhkiAAAAH9JREFUKJHt0rEJwlAUheHvSQoHsNIFLHQGxxDcyiGCe2QESbC3EhzAQsKz8EUwINwmnac653J+uMVJvrXFfnQ7oRtCwhGrkndYjIA7muKvCS3WYmpTMZtAOaNLqPAMAD2qWfCVj/7AZEAOdvMA9LgEgDPvtcISB8x/lB+ocXsBa/ITHfqY86EAAAAASUVORK5CYII="
+                />
+              </svg>
+            </button>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+              >
+                <defs>
+                  <image
+                    width="16"
+                    height="16"
+                    id="img1"
+                    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAGBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+k/ojQAAACB0Uk5TAAJtJaH/5ygn8iSQKjlloumaAaOJmaSYA5dzhJY/fGgPOgO/AAAAWUlEQVR4nHXJ1xKAIAxE0SAGe+8N//8vBZwh0Rn27dwFoIlIAp+IUSU8pBmiyukvysqU2rvB1pSuJ6Mp0ntAuxG+nvw/Oy8hr6+3kGH/GQ7rk+wCN1xa39wPNM8FEVHKqLsAAAAASUVORK5CYII="
+                  />
+                </defs>
+                <style>
+                  tspan {
+                    white-space: pre;
+                  }
+                </style>
+                <g id="Header">
+                  <g id="header__basket">
+                    <g id="basket__drop">
+                      <g id="prod-1">
+                        <g id="Szczegoly">
+                          <use id="icon__edit" href="#img1" x="0" y="0" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- product 2 -->
+    <div class="product">
+      <img class="product__img" src="/img/products/2.png" alt="product img" />
+      <div class="product__desc">
+        <p class="product__desc__name product__desc__name--sale">
+          biustonosz push-up line mos 12
+        </p>
+        <p class="product__desc__price">79.00 zł</p>
+        <div class="product__desc__quantity">
+          <p class="product__desc__quantity__txt">ilość:</p>
+          <input type="number" class="product__desc__quantity__inp" />
+          <div class="product__desc__quantity__tools">
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="12"
+                height="16"
+                viewBox="0 0 12 16"
+              >
+                <image
+                  id="icon__delete"
+                  width="12"
+                  height="16"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAABHNCSVQICAgIfAhkiAAAAH9JREFUKJHt0rEJwlAUheHvSQoHsNIFLHQGxxDcyiGCe2QESbC3EhzAQsKz8EUwINwmnac653J+uMVJvrXFfnQ7oRtCwhGrkndYjIA7muKvCS3WYmpTMZtAOaNLqPAMAD2qWfCVj/7AZEAOdvMA9LgEgDPvtcISB8x/lB+ocXsBa/ITHfqY86EAAAAASUVORK5CYII="
+                />
+              </svg>
+            </button>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                width="16"
+                height="16"
+              >
+                <defs>
+                  <image
+                    width="16"
+                    height="16"
+                    id="img1"
+                    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAGBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+k/ojQAAACB0Uk5TAAJtJaH/5ygn8iSQKjlloumaAaOJmaSYA5dzhJY/fGgPOgO/AAAAWUlEQVR4nHXJ1xKAIAxE0SAGe+8N//8vBZwh0Rn27dwFoIlIAp+IUSU8pBmiyukvysqU2rvB1pSuJ6Mp0ntAuxG+nvw/Oy8hr6+3kGH/GQ7rk+wCN1xa39wPNM8FEVHKqLsAAAAASUVORK5CYII="
+                  />
+                </defs>
+                <style>
+                  tspan {
+                    white-space: pre;
+                  }
+                </style>
+                <g id="Header">
+                  <g id="header__basket">
+                    <g id="basket__drop">
+                      <g id="prod-1">
+                        <g id="Szczegoly">
+                          <use id="icon__edit" href="#img1" x="0" y="0" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="line"></span>
+    <a href="#" class="btn btn--main basket__btn">Zobacz koszyk</a>
+  </div>
+</div>
+
+
+    <!--  -->
+    <section class="component">
+  <div class="wrapper">
+    <div class="emptyPage"></div>
+  </div>
+</section>
+
     <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/search.js" type="text/javascript"></script>
+    <script src="js/basketMenu.js" type="text/javascript"></script>
   </body>
 </html>

@@ -11,5 +11,12 @@
 // addons
 
 // modules
-@import "topBar.scss";
-@import "header.scss";
+
+// ** header
+@import "components/header/topBar.scss";
+@import "components/header/mainBar.scss";
+@import "components/header/navBar.scss";
+
+// ** others
+@import "basketMenu.scss";
+@import "whiteSpace.scss";

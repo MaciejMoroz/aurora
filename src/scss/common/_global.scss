@@ -33,6 +33,7 @@ ol {
 }
 
 a {
+  cursor: pointer;
   color: inherit;
   text-decoration: none;
   &:hover {
@@ -74,15 +75,20 @@ input {
   background: none;
   padding: 0;
   &:focus {
-    box-shadow: 0 3px 5px $color-1;
+    box-shadow: 0 3px 5px $color-5;
   }
-  .is-submitted &:invalid {
-    box-shadow: 0 3px 5px $color-error;
-    + .form-error-msg {
-      visibility: visible;
-    }
-  }
+  outline-color: $color-5;
 }
+// hide arrows in input type number
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .inpt {
   border-bottom: 1px solid $color-4;
   padding: $base-unit * 0.5;
@@ -100,6 +106,21 @@ button {
   padding: 8px 16px;
   cursor: pointer;
   border-color: $color-4;
+  &--main {
+    display: block;
+    text-align: center;
+    width: 183px;
+    background-color: $color-3;
+    border-radius: 3px;
+    border: 3px solid $color-3;
+    color: $color-2;
+    font-size: $font-size-h7;
+    &:hover {
+      background-color: $color-2;
+      color: $color-3;
+      font-size: $fw-bold;
+    }
+  }
   &--border-left {
     border-left: 1px solid $color-4;
     margin: 0 -2px 0 0;
@@ -113,6 +134,7 @@ button {
     color: $color-5; /*For IE*/
   }
   &__close {
+    cursor: pointer;
     &--1,
     &--2 {
       display: block;
@@ -152,6 +174,10 @@ button {
 .component {
   margin-top: $space;
   margin-bottom: $space;
+  &--sm {
+    margin-top: $base-unit;
+    margin-bottom: $base-unit;
+  }
 }
 
 .hide-mob {
@@ -169,4 +195,13 @@ button {
 }
 .fake-bold:hover {
   text-shadow: 1px 0 0 currentColor;
+}
+
+.rotate {
+  animation: rotate-btn 0.5s;
+  animation-iteration-count: 2;
+}
+
+.shadow {
+  box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
 }
