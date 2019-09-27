@@ -1,36 +1,83 @@
 .nav-menu {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  height: 43px;
-  white-space: nowrap;
+  position: fixed;
+  right: -400px;
+  transition: 0.3s;
+
+  .open-navMenu & {
+    right: 0;
+    position: absolute;
+    height: 0px;
+  }
+  @media (min-width: 1100px) {
+    position: static;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    white-space: nowrap;
+  }
   &__main {
+    z-index: 99999;
     position: relative;
-    display: inline-block;
     text-transform: uppercase;
-    &:hover {
-      .nav-menu__second-lvl {
-        display: block;
+
+    a {
+      display: block;
+      height: 43px;
+      width: 100%;
+      padding-top: $base-unit;
+      padding-left: $space;
+      padding-right: $space * 2;
+      &:hover {
+        background-color: $color-8;
       }
     }
-    li:hover {
-      background-color: $color-8;
+
+    @media (min-width: 1100px) {
+      display: inline-block;
+      a {
+        padding: $base-unit;
+      }
+    }
+    &:hover {
+      height: auto;
+      .nav-menu__second-lvl {
+        height: auto;
+        @media (min-width: 1100px) {
+          display: block;
+          box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
+        }
+      }
     }
   }
   &__second-lvl {
-    border: 3px solid $color-6;
-    background-color: $color-2;
     z-index: 99999;
-    position: absolute;
-    top: $space * 1.2;
-    display: none;
+    height: 0;
+    overflow: hidden;
     text-transform: none;
+    background-color: $color-2;
+    a {
+      padding-top: $base-unit;
+      padding-left: $space * 2;
+      padding-right: $space;
+    }
+
+    @media (min-width: 1100px) {
+      position: absolute;
+      overflow: unset;
+      top: $space * 1.2;
+      display: none;
+      border: 3px solid $color-6;
+      a {
+        padding: $base-unit $space;
+      }
+    }
 
     ul {
-      margin: $base-unit 0;
+      @media (min-width: 1100px) {
+        margin: $base-unit 0;
+      }
     }
     li {
-      padding: $base-unit $space;
       &:first-child {
         margin-top: $base-unit;
       }
@@ -40,17 +87,36 @@
     }
     li:hover {
       .nav-menu__third-lvl {
-        display: block;
+        height: auto;
+
+        @media (min-width: 1100px) {
+          box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
+          display: block;
+        }
       }
     }
   }
   &__third-lvl {
+    z-index: 99999;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
     text-transform: none;
-    position: absolute;
-    left: 100%;
-    top: -17px;
-    display: none;
-    border: 3px solid $color-6;
     background-color: $color-2;
+    a {
+      padding: $base-unit 0 0 $space * 3;
+    }
+
+    @media (min-width: 1100px) {
+      border: 3px solid $color-6;
+      height: auto;
+      display: none;
+      position: absolute;
+      left: 100%;
+      top: -17px;
+      a {
+        padding: $base-unit $space;
+      }
+    }
   }
 }
