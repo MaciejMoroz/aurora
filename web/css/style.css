@@ -763,8 +763,9 @@ button {
             right: 0; } }
       .mainBar__content__tools__searchBox .btn__close {
         position: absolute;
-        top: 15px;
-        right: 15px; }
+        top: 7px;
+        right: 15px;
+        height: 20px; }
         @media (min-width: 1100px) {
           .mainBar__content__tools__searchBox .btn__close {
             display: none; } }
@@ -1028,7 +1029,8 @@ button {
 .basket__close {
   position: absolute;
   right: 14px;
-  top: 28px; }
+  top: 28px;
+  height: 20px; }
 
 .emptyPage {
   width: 100%;
