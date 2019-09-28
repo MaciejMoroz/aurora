@@ -1,24 +1,8 @@
 const BODY = document.querySelector('body'),
-    hamburger = document.querySelector('[data-hamburger-btn]'),
-    coll = document.getElementsByClassName("colapse");
+    hamburger = document.querySelector('[data-hamburger-btn]');
+
 
 hamburger.onclick = () => {
     BODY.classList.toggle('open-navMenu');
-
-}
-
-
-
-
-
-for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    });
+    hamburger.classList.toggle('active');
 }

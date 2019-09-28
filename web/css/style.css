@@ -122,8 +122,8 @@ input {
   input::placeholder {
     font-family: "Helvetica", sans-serif; }
   input:focus {
-    -webkit-box-shadow: 0 3px 5px #ecc7d0;
-            box-shadow: 0 3px 5px #ecc7d0; }
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.75); }
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -166,10 +166,6 @@ button {
     margin: 0 -2px 0 0; }
   .btn--border-right {
     border-right: 1px solid #d7d7d7; }
-  .btn:hover {
-    background-position: 0;
-    color: #ecc7d0;
-    /*For IE*/ }
   .btn__close {
     cursor: pointer; }
     .btn__close--1, .btn__close--2 {
@@ -232,6 +228,103 @@ button {
 .shadow {
   -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
           box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); }
+
+.iconAnimation svg {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+
+.iconAnimation:hover .iconAnimation--counter {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5); }
+
+.iconAnimation:hover svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  fill: #ea2260; }
+
+.iconAnimation--counter {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+
+.iconAnimation--hamburger {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+          transform: scale(1); }
+  .iconAnimation--hamburger:hover {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3); }
+    .iconAnimation--hamburger:hover span {
+      background-color: #ea2260; }
+
+@media (min-width: 400px) {
+  .btn-animation {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ecc7d0 50%, #000 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    color: #fff;
+    /*For IE*/ }
+    .btn-animation:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(45deg, #f7f7f7 50%, transparent 50%);
+      z-index: -1; }
+    .btn-animation, .btn-animation:after {
+      background-size: 300%;
+      background-position: 100%;
+      -webkit-transition: 1s, font-size 0.2s;
+      transition: 1s, font-size 0.2s; }
+    .btn-animation:hover, .btn-animation:hover:after {
+      background-position: 0;
+      color: #ecc7d0;
+      /*For IE*/ } }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .btn-animation {
+    /* IE10+ CSS styles go here */
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #f7f7f7 50%, #fff 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    color: #000;
+    /*For IE*/ }
+    .btn-animation:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(45deg, #f7f7f7 50%, transparent 50%);
+      z-index: -1; }
+    .btn-animation, .btn-animation:after {
+      background-size: 300%;
+      background-position: 100%;
+      -webkit-transition: 1s, font-size 0.2s;
+      transition: 1s, font-size 0.2s; }
+    .btn-animation:hover, .btn-animation:hover:after {
+      background-position: 0;
+      color: #ecc7d0;
+      /*For IE*/ } }
 
 @-webkit-keyframes shake {
   0% {
@@ -305,151 +398,151 @@ button {
 
 @-webkit-keyframes send {
   0% {
-    -webkit-transform: translate(0, 0) rotate(15deg);
-            transform: translate(0, 0) rotate(15deg); }
+    -webkit-transform: translate(0, 0) rotate(10deg);
+            transform: translate(0, 0) rotate(10deg); }
   10% {
-    -webkit-transform: translate(-5px, 5px);
-            transform: translate(-5px, 5px); }
+    -webkit-transform: translate(-5px, 5px) rotate(-5deg);
+            transform: translate(-5px, 5px) rotate(-5deg); }
   20% {
-    -webkit-transform: translate(-10px, 10px);
-            transform: translate(-10px, 10px); }
+    -webkit-transform: translate(-10px, 10px) rotate(10deg);
+            transform: translate(-10px, 10px) rotate(10deg); }
   30% {
-    -webkit-transform: translate(-5px, 5px);
-            transform: translate(-5px, 5px); }
+    -webkit-transform: translate(-5px, 5px) rotate(-5deg);
+            transform: translate(-5px, 5px) rotate(-5deg); }
   40% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px); }
+    -webkit-transform: translate(0px, 0px) rotate(10deg);
+            transform: translate(0px, 0px) rotate(10deg); }
   50% {
-    -webkit-transform: translate(5px, -5px);
-            transform: translate(5px, -5px); }
+    -webkit-transform: translate(5px, -5px) rotate(-5deg);
+            transform: translate(5px, -5px) rotate(-5deg); }
   60% {
-    -webkit-transform: translate(10px, -10px);
-            transform: translate(10px, -10px); }
+    -webkit-transform: translate(10px, -10px) rotate(10deg);
+            transform: translate(10px, -10px) rotate(10deg); }
   70% {
-    -webkit-transform: translate(15px, -15px);
-            transform: translate(15px, -15px); }
+    -webkit-transform: translate(15px, -15px) rotate(-5deg);
+            transform: translate(15px, -15px) rotate(-5deg); }
   80% {
-    -webkit-transform: translate(20px, -20px);
-            transform: translate(20px, -20px); }
+    -webkit-transform: translate(20px, -20px) rotate(10deg);
+            transform: translate(20px, -20px) rotate(10deg); }
   90% {
-    -webkit-transform: translate(35px, -35px);
-            transform: translate(35px, -35px); }
+    -webkit-transform: translate(35px, -35px) rotate(-5deg);
+            transform: translate(35px, -35px) rotate(-5deg); }
   100% {
-    -webkit-transform: translate(1000px, -1000px);
-            transform: translate(1000px, -1000px); } }
+    -webkit-transform: translate(50px, -50px) rotate(10deg);
+            transform: translate(50px, -50px) rotate(10deg); } }
 
 @keyframes send {
   0% {
-    -webkit-transform: translate(0, 0) rotate(15deg);
-            transform: translate(0, 0) rotate(15deg); }
+    -webkit-transform: translate(0, 0) rotate(10deg);
+            transform: translate(0, 0) rotate(10deg); }
   10% {
-    -webkit-transform: translate(-5px, 5px);
-            transform: translate(-5px, 5px); }
+    -webkit-transform: translate(-5px, 5px) rotate(-5deg);
+            transform: translate(-5px, 5px) rotate(-5deg); }
   20% {
-    -webkit-transform: translate(-10px, 10px);
-            transform: translate(-10px, 10px); }
+    -webkit-transform: translate(-10px, 10px) rotate(10deg);
+            transform: translate(-10px, 10px) rotate(10deg); }
   30% {
-    -webkit-transform: translate(-5px, 5px);
-            transform: translate(-5px, 5px); }
+    -webkit-transform: translate(-5px, 5px) rotate(-5deg);
+            transform: translate(-5px, 5px) rotate(-5deg); }
   40% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px); }
+    -webkit-transform: translate(0px, 0px) rotate(10deg);
+            transform: translate(0px, 0px) rotate(10deg); }
   50% {
-    -webkit-transform: translate(5px, -5px);
-            transform: translate(5px, -5px); }
+    -webkit-transform: translate(5px, -5px) rotate(-5deg);
+            transform: translate(5px, -5px) rotate(-5deg); }
   60% {
-    -webkit-transform: translate(10px, -10px);
-            transform: translate(10px, -10px); }
+    -webkit-transform: translate(10px, -10px) rotate(10deg);
+            transform: translate(10px, -10px) rotate(10deg); }
   70% {
-    -webkit-transform: translate(15px, -15px);
-            transform: translate(15px, -15px); }
+    -webkit-transform: translate(15px, -15px) rotate(-5deg);
+            transform: translate(15px, -15px) rotate(-5deg); }
   80% {
-    -webkit-transform: translate(20px, -20px);
-            transform: translate(20px, -20px); }
+    -webkit-transform: translate(20px, -20px) rotate(10deg);
+            transform: translate(20px, -20px) rotate(10deg); }
   90% {
-    -webkit-transform: translate(35px, -35px);
-            transform: translate(35px, -35px); }
+    -webkit-transform: translate(35px, -35px) rotate(-5deg);
+            transform: translate(35px, -35px) rotate(-5deg); }
   100% {
-    -webkit-transform: translate(1000px, -1000px);
-            transform: translate(1000px, -1000px); } }
+    -webkit-transform: translate(50px, -50px) rotate(10deg);
+            transform: translate(50px, -50px) rotate(10deg); } }
 
 @-webkit-keyframes send-line {
   0% {
-    -webkit-transform: translate(0, 0) rotate(-45deg);
-            transform: translate(0, 0) rotate(-45deg); }
+    -webkit-transform: translate(0, 5) rotate(-45deg);
+            transform: translate(0, 5) rotate(-45deg); }
   10% {
-    -webkit-transform: translate(-20px, 20px) rotate(-45deg);
-            transform: translate(-20px, 20px) rotate(-45deg); }
+    -webkit-transform: translate(-10px, 25px) rotate(-45deg);
+            transform: translate(-10px, 25px) rotate(-45deg); }
   20% {
-    -webkit-transform: translate(-25px, 25px) rotate(-45deg);
-            transform: translate(-25px, 25px) rotate(-45deg);
+    -webkit-transform: translate(-5px, 30px) rotate(-45deg);
+            transform: translate(-5px, 30px) rotate(-45deg);
     opacity: 0; }
   30% {
-    -webkit-transform: translate(-20px, 20px) rotate(-45deg);
-            transform: translate(-20px, 20px) rotate(-45deg); }
+    -webkit-transform: translate(0px, 25px) rotate(-45deg);
+            transform: translate(0px, 25px) rotate(-45deg); }
   40% {
-    -webkit-transform: translate(-15px, 15px) rotate(-45deg);
-            transform: translate(-15px, 15px) rotate(-45deg);
+    -webkit-transform: translate(5px, 20px) rotate(-45deg);
+            transform: translate(5px, 20px) rotate(-45deg);
     opacity: 1; }
   50% {
-    -webkit-transform: translate(-10px, 10px) rotate(-45deg);
-            transform: translate(-10px, 10px) rotate(-45deg); }
+    -webkit-transform: translate(10px, 15px) rotate(-45deg);
+            transform: translate(10px, 15px) rotate(-45deg); }
   60% {
-    -webkit-transform: translate(-5px, 5px) rotate(-45deg);
-            transform: translate(-5px, 5px) rotate(-45deg); }
+    -webkit-transform: translate(15px, 10px) rotate(-45deg);
+            transform: translate(15px, 10px) rotate(-45deg); }
   70% {
-    -webkit-transform: translate(0px, 0px) rotate(-45deg);
-            transform: translate(0px, 0px) rotate(-45deg); }
+    -webkit-transform: translate(20px, 5px) rotate(-45deg);
+            transform: translate(20px, 5px) rotate(-45deg); }
   80% {
-    -webkit-transform: translate(5px, -5px) rotate(-45deg);
-            transform: translate(5px, -5px) rotate(-45deg); }
-  90% {
-    -webkit-transform: translate(30px, -30px) rotate(-45deg);
-            transform: translate(30px, -30px) rotate(-45deg);
+    -webkit-transform: translate(25px, 0px) rotate(-45deg);
+            transform: translate(25px, 0px) rotate(-45deg);
     opacity: 1; }
+  90% {
+    -webkit-transform: translate(30px, -5px) rotate(-45deg);
+            transform: translate(30px, -5px) rotate(-45deg);
+    opacity: 0; }
   100% {
-    -webkit-transform: translate(50px, -50px) rotate(-45deg);
-            transform: translate(50px, -50px) rotate(-45deg);
-    opacity: 0; } }
+    -webkit-transform: translate(45px, -10px) rotate(-45deg);
+            transform: translate(45px, -10px) rotate(-45deg); } }
 
 @keyframes send-line {
   0% {
-    -webkit-transform: translate(0, 0) rotate(-45deg);
-            transform: translate(0, 0) rotate(-45deg); }
+    -webkit-transform: translate(0, 5) rotate(-45deg);
+            transform: translate(0, 5) rotate(-45deg); }
   10% {
-    -webkit-transform: translate(-20px, 20px) rotate(-45deg);
-            transform: translate(-20px, 20px) rotate(-45deg); }
+    -webkit-transform: translate(-10px, 25px) rotate(-45deg);
+            transform: translate(-10px, 25px) rotate(-45deg); }
   20% {
-    -webkit-transform: translate(-25px, 25px) rotate(-45deg);
-            transform: translate(-25px, 25px) rotate(-45deg);
+    -webkit-transform: translate(-5px, 30px) rotate(-45deg);
+            transform: translate(-5px, 30px) rotate(-45deg);
     opacity: 0; }
   30% {
-    -webkit-transform: translate(-20px, 20px) rotate(-45deg);
-            transform: translate(-20px, 20px) rotate(-45deg); }
+    -webkit-transform: translate(0px, 25px) rotate(-45deg);
+            transform: translate(0px, 25px) rotate(-45deg); }
   40% {
-    -webkit-transform: translate(-15px, 15px) rotate(-45deg);
-            transform: translate(-15px, 15px) rotate(-45deg);
+    -webkit-transform: translate(5px, 20px) rotate(-45deg);
+            transform: translate(5px, 20px) rotate(-45deg);
     opacity: 1; }
   50% {
-    -webkit-transform: translate(-10px, 10px) rotate(-45deg);
-            transform: translate(-10px, 10px) rotate(-45deg); }
+    -webkit-transform: translate(10px, 15px) rotate(-45deg);
+            transform: translate(10px, 15px) rotate(-45deg); }
   60% {
-    -webkit-transform: translate(-5px, 5px) rotate(-45deg);
-            transform: translate(-5px, 5px) rotate(-45deg); }
+    -webkit-transform: translate(15px, 10px) rotate(-45deg);
+            transform: translate(15px, 10px) rotate(-45deg); }
   70% {
-    -webkit-transform: translate(0px, 0px) rotate(-45deg);
-            transform: translate(0px, 0px) rotate(-45deg); }
+    -webkit-transform: translate(20px, 5px) rotate(-45deg);
+            transform: translate(20px, 5px) rotate(-45deg); }
   80% {
-    -webkit-transform: translate(5px, -5px) rotate(-45deg);
-            transform: translate(5px, -5px) rotate(-45deg); }
-  90% {
-    -webkit-transform: translate(30px, -30px) rotate(-45deg);
-            transform: translate(30px, -30px) rotate(-45deg);
+    -webkit-transform: translate(25px, 0px) rotate(-45deg);
+            transform: translate(25px, 0px) rotate(-45deg);
     opacity: 1; }
+  90% {
+    -webkit-transform: translate(30px, -5px) rotate(-45deg);
+            transform: translate(30px, -5px) rotate(-45deg);
+    opacity: 0; }
   100% {
-    -webkit-transform: translate(50px, -50px) rotate(-45deg);
-            transform: translate(50px, -50px) rotate(-45deg);
-    opacity: 0; } }
+    -webkit-transform: translate(45px, -10px) rotate(-45deg);
+            transform: translate(45px, -10px) rotate(-45deg); } }
 
 @-webkit-keyframes rotate-btn {
   0% {
@@ -537,12 +630,23 @@ button {
   overflow: hidden; }
   .topBar__btn {
     font-size: 10%; }
+  .topBar__acc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+    .topBar__acc__btn {
+      white-space: nowrap; }
   .topBar__contact .link {
     position: relative;
-    margin: 0 14px 0 0; }
+    margin: 0; }
+    @media (min-width: 420px) {
+      .topBar__contact .link {
+        margin: 0 14px 0 0; } }
     .topBar__contact .link__content {
       display: none; }
-      @media (min-width: 580px) {
+      @media (min-width: 623px) {
         .topBar__contact .link__content {
           display: unset; } }
     .topBar__contact .link:hover .topBar__svg--phone {
@@ -552,11 +656,11 @@ button {
               animation-iteration-count: infinite; }
     .topBar__contact .link:hover .topBar__svg--email {
       position: relative;
-      -webkit-animation: send 0.55s;
-              animation: send 0.55s; }
+      -webkit-animation: send 0.95s;
+              animation: send 0.95s; }
     .topBar__contact .link:hover .link__animation-line {
-      -webkit-animation: send-line 0.5s;
-              animation: send-line 0.5s; }
+      -webkit-animation: send-line 0.9s;
+              animation: send-line 0.9s; }
     .topBar__contact .link__animation-line {
       position: absolute;
       width: 10px;
@@ -618,15 +722,15 @@ button {
     .mainBar__content__tools__searchBox {
       position: absolute;
       top: 0;
-      -webkit-transition: 0.3s;
-      transition: 0.3s;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
       opacity: 0;
       left: 0;
       width: 100%; }
       .open-searchBox .mainBar__content__tools__searchBox {
         display: block;
         opacity: 1;
-        top: 70px; }
+        top: 120px; }
       @media (min-width: 1100px) {
         .mainBar__content__tools__searchBox {
           display: block;
@@ -669,7 +773,11 @@ button {
         font-weight: bold;
         margin: 0 10px;
         white-space: nowrap;
-        height: 100%; }
+        height: 100%;
+        display: none; }
+        @media (min-width: 1100px) {
+          .mainBar__content__tools__basket__text {
+            display: block; } }
       .mainBar__content__tools__basket__counter {
         position: absolute;
         right: -10px;
@@ -708,8 +816,8 @@ button {
       transition: 0.3s;
       opacity: 0; }
     .mainBar__content__tools .active span:last-child {
-      -webkit-transform: rotate(-45deg) translate(0px, -10px);
-              transform: rotate(-45deg) translate(0px, -10px);
+      -webkit-transform: rotate(-45deg) translate(1px, -10.5px);
+              transform: rotate(-45deg) translate(1px, -10.5px);
       -webkit-transition: 0.3s;
       transition: 0.3s; }
 
@@ -721,7 +829,10 @@ button {
   .open-navMenu .nav-menu {
     right: 0;
     position: absolute;
-    height: 0px; }
+    height: auto;
+    border: 3px solid #eeeeee;
+    -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
+            box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); }
   @media (min-width: 1100px) {
     .nav-menu {
       position: static;
@@ -735,7 +846,7 @@ button {
               justify-content: space-between;
       white-space: nowrap; } }
   .nav-menu__main {
-    z-index: 99999;
+    z-index: 999;
     position: relative;
     text-transform: uppercase; }
     .nav-menu__main a {
@@ -762,7 +873,7 @@ button {
             -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
                     box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); } }
   .nav-menu__second-lvl {
-    z-index: 99999;
+    z-index: 999;
     height: 0;
     overflow: hidden;
     text-transform: none;
@@ -795,7 +906,7 @@ button {
                   box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
           display: block; } }
   .nav-menu__third-lvl {
-    z-index: 99999;
+    z-index: 999;
     height: 0;
     width: 100%;
     overflow: hidden;
@@ -819,15 +930,26 @@ button {
   position: fixed;
   right: -400px;
   top: 150px;
-  z-index: 100;
+  z-index: 9999;
   border: solid 3px #eeeeee;
   padding: 0 24px;
-  width: 345px;
+  width: 360px;
   -webkit-transition: 0.5s;
   transition: 0.5s; }
+  @media (min-width: 360px) {
+    .basket__content {
+      width: 345px;
+      left: unset; } }
   .open-basket .basket__content {
+    left: 0;
     right: 0;
     position: absolute; }
+    @media (min-width: 360px) {
+      .open-basket .basket__content {
+        left: auto; } }
+  .basket__content__hdr {
+    margin-top: 32.06px;
+    margin-bottom: 14px; }
   .basket__content__text {
     margin: 0;
     font-size: 14px;
@@ -844,6 +966,9 @@ button {
   display: -ms-flexbox;
   display: flex;
   margin: 14px 0; }
+  .basket .product__img {
+    height: 78px;
+    width: 58px; }
   .basket .product__desc {
     width: 100%;
     margin: 0 0 0 14px; }
@@ -853,7 +978,15 @@ button {
       .basket .product__desc__name--sale {
         color: #ea2260; }
     .basket .product__desc__price {
-      margin: 0; }
+      margin: 0;
+      font-weight: 700;
+      display: inline-block; }
+      .basket .product__desc__price--sale {
+        display: inline-block;
+        padding-left: 10px;
+        color: #ea2260;
+        text-decoration: line-through;
+        font-size: 10.92px; }
     .basket .product__desc__quantity {
       margin: 14px 0; }
       .basket .product__desc__quantity__txt {
@@ -876,7 +1009,9 @@ button {
           margin: 5px 0 0 14px; }
 
 .basket__btn {
-  margin: 28px auto; }
+  margin: 0 auto;
+  margin-top: 21px;
+  margin-bottom: 21px; }
 
 .basket__close {
   position: absolute;

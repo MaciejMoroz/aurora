@@ -6,10 +6,20 @@ const
 
 searchIcon.onclick = () => {
     BODY.classList.toggle('open-searchBox');
-    closeBtnn.classList.remove('rotate');
+    closeBtn.classList.remove('rotate');
 
 }
 closeBtn.onclick = () => {
     BODY.classList.toggle('open-searchBox');
     closeBtn.classList.toggle('rotate');
 }
+
+let windowSize = () => {
+    let currentSize = window.innerWidth
+    if (currentSize > 1100) {
+        BODY.classList.remove('open-searchBox');
+    }
+}
+window.addEventListener("resize", windowSize);
+
+

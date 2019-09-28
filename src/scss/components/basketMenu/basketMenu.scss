@@ -4,15 +4,28 @@
     position: fixed;
     right: -400px;
     top: 150px;
-    z-index: 100;
+    z-index: 9999;
     border: solid 3px $color-6;
     padding: 0 24px;
-    width: 345px;
+    width: 360px;
     transition: 0.5s;
+    @media (min-width: $bpoint-mob) {
+      width: 345px;
+      left: unset;
+    }
     .open-basket & {
+      left: 0;
       right: 0;
       position: absolute;
+      @media (min-width: $bpoint-mob) {
+        left: auto;
+      }
     }
+    &__hdr {
+      margin-top: $base-unit * 2.29;
+      margin-bottom: $base-unit;
+    }
+
     &__text {
       margin: 0;
       font-size: $font-size-body;
@@ -27,9 +40,14 @@
       }
     }
   }
+
   .product {
     display: flex;
     margin: $base-unit 0;
+    &__img {
+      height: 78px;
+      width: 58px;
+    }
     &__desc {
       width: 100%;
       margin: 0 0 0 $base-unit;
@@ -42,6 +60,16 @@
       }
       &__price {
         margin: 0;
+        font-weight: $fw-bold;
+        display: inline-block;
+
+        &--sale {
+          display: inline-block;
+          padding-left: 10px;
+          color: $color-3;
+          text-decoration: line-through;
+          font-size: $font-size-h8;
+        }
       }
       &__quantity {
         margin: $base-unit 0;
@@ -71,7 +99,9 @@
     }
   }
   &__btn {
-    margin: $space auto;
+    margin: 0 auto;
+    margin-top: $base-unit * 1.5;
+    margin-bottom: $base-unit * 1.5;
   }
 
   &__close {
@@ -79,5 +109,4 @@
     right: $base-unit;
     top: $space;
   }
-  // to end
 }

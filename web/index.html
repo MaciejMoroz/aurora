@@ -12,12 +12,12 @@
   </head>
 
   <body>
-    <!-- components -->
+    
     <header class="header">
   <div class="wrapper">
   <div class="topBar">
     <div class="topBar__contact">
-      <a class="link" href="tel:293939098">
+      <a class="link btn-animation" href="tel:293939098">
         <svg
           class="topBar__svg topBar__svg--phone"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@
         </svg>
         <span class="link__content fake-bold"> 293 939 098</span>
       </a>
-      <a class="link" href="mailto:kontakt@aurorabox.pl">
+      <a class="link btn-animation" href="mailto:kontakt@aurorabox.pl">
         <svg
           class="topBar__svg topBar__svg--email"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@
     </div>
     <div class="topBar__acc">
       <button
-        class="btn btn--border-left btn--border-right topBar__acc__btn  fake-bold"
+        class="btn btn--border-left btn--border-right topBar__acc__btn  fake-bold iconAnimation btn-animation"
       >
         <svg
           class="topBar__svg"
@@ -75,7 +75,9 @@
         </svg>
         Zaloguj się
       </button>
-      <button class="btn btn--border-right fake-bold cos">
+      <button
+        class="btn btn--border-right topBar__acc__btn  fake-bold iconAnimation btn-animation"
+      >
         <svg
           class="topBar__svg"
           xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +113,10 @@
         </a>
       </h1>
       <div class="mainBar__content__tools">
-        <div class="mainBar__content__tools__search" data-search-btn>
+        <div
+          class="mainBar__content__tools__search iconAnimation "
+          data-search-btn
+        >
           <svg
             class="mainBar__content__tools__search__icon"
             xmlns="http://www.w3.org/2000/svg"
@@ -152,9 +157,12 @@
             <span class="btn__close--2"></span>
           </button>
         </div>
-        <div class="mainBar__content__tools__basket" data-basket-btn>
+        <div
+          class="mainBar__content__tools__basket iconAnimation"
+          data-basket-btn
+        >
           <svg
-            class="mainBar__content__tools__basket__icon"
+            class="mainBar__content__tools__basket__icon "
             xmlns="http://www.w3.org/2000/svg"
             width="26"
             height="31"
@@ -171,12 +179,15 @@
           </p>
 
           <div
-            class="mainBar__content__tools__basket__counter basketCounterBox--js"
+            class="mainBar__content__tools__basket__counter iconAnimation--counter"
           >
-            <span data-basketCounter="basketCounter"></span>
+            <span>2</span>
           </div>
         </div>
-        <div class="mainBar__content__tools__hamburger" data-hamburger-btn>
+        <div
+          class="mainBar__content__tools__hamburger iconAnimation--hamburger"
+          data-hamburger-btn
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -191,36 +202,50 @@
   <div class="wrapper">
     <ul class="nav-menu">
       <li class="nav-menu__main">
-        <a href="#">Kategorie</a>
+        <a class="btn-animation" href="#">Kategorie</a>
         <ul class="nav-menu__second-lvl">
           <li>
-            <a href="#">Biustonosze</a>
+            <a class="btn-animation" href="#">Biustonosze</a>
             <ul class="nav-menu__third-lvl">
-              <li><a href="#">Bardotka</a></li>
-              <li><a href="#">Minimizer</a></li>
-              <li><a href="#">Multiway</a></li>
-              <li><a href="#">Push-up</a></li>
-              <li><a href="#">Soft</a></li>
-              <li><a href="#">Sportowe</a></li>
-              <li><a href="#">Usztywniane</a></li>
+              <li><a class="btn-animation" href="#">Bardotka</a></li>
+              <li><a class="btn-animation" href="#">Minimizer</a></li>
+              <li><a class="btn-animation" href="#">Multiway</a></li>
+              <li><a class="btn-animation" href="#">Push-up</a></li>
+              <li><a class="btn-animation" href="#">Soft</a></li>
+              <li><a class="btn-animation" href="#">Sportowe</a></li>
+              <li><a class="btn-animation" href="#">Usztywniane</a></li>
             </ul>
           </li>
-          <li><a href="#">Body</a></li>
-          <li><a href="#">Majtki</a></li>
-          <li><a href="#">Stroje kąpielowe</a></li>
-          <li><a href="#">Bielizna erotyczna</a></li>
-          <li><a href="#">Stroje sporotwe</a></li>
-          <li><a href="#">Bielizna wieczorowa</a></li>
+          <li><a class="btn-animation" href="#">Body</a></li>
+          <li><a class="btn-animation" href="#">Majtki</a></li>
+          <li><a class="btn-animation" href="#">Stroje kąpielowe</a></li>
+          <li><a class="btn-animation" href="#">Bielizna erotyczna</a></li>
+          <li><a class="btn-animation" href="#">Stroje sporotwe</a></li>
+          <li><a class="btn-animation" href="#">Bielizna wieczorowa</a></li>
         </ul>
       </li>
-      <li class="nav-menu__main"><a href="#">Nowości</a></li>
-      <li class="nav-menu__main"><a href="#">Promocje</a></li>
-      <li class="nav-menu__main"><a href="#">Wyprzedaże</a></li>
-      <li class="nav-menu__main"><a href="#">Kolekcje Sezony</a></li>
-      <li class="nav-menu__main"><a href="#">Nasza oferta</a></li>
-      <li class="nav-menu__main"><a href="#">Trendy 2018</a></li>
-      <li class="nav-menu__main"><a href="#">Blog</a></li>
-      <li class="nav-menu__main"><a href="#">Kontakt</a></li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Nowości</a>
+      </li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Promocje</a>
+      </li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Wyprzedaże</a>
+      </li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Kolekcje Sezony</a>
+      </li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Nasza oferta</a>
+      </li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Trendy 2018</a>
+      </li>
+      <li class="nav-menu__main"><a class="btn-animation" href="#">Blog</a></li>
+      <li class="nav-menu__main">
+        <a class="btn-animation" href="#">Kontakt</a>
+      </li>
     </ul>
 
     <span class="line"></span>
@@ -229,10 +254,10 @@
 
 </header>
 
-    <!-- menus -->
+    
     <div class="basket">
   <div class="basket__content shadow">
-    <div class="component--sm">
+    <div class="basket__content__hdr">
       <button class="btn__close basket__close" data-closeBasketBtn>
         <span class="btn__close--1"></span>
         <span class="btn__close--2"></span>
@@ -242,11 +267,11 @@
   basket__content__text--sm"
       >
         Produkty w koszyku:
-        <span data-basketCounter="basketCounter"></span>
+        <span>2</span>
       </p>
       <p class="basket__content__text">
         Kwota do zapłaty:
-        <span data-basketToPay="basketToPay"></span>
+        <span>217.00 zł</span>
       </p>
     </div>
     <span class="line"></span>
@@ -259,53 +284,54 @@
         <p class="product__desc__price">59.00 zł</p>
         <div class="product__desc__quantity">
           <p class="product__desc__quantity__txt">ilość:</p>
-          <input type="number" class="product__desc__quantity__inp" />
+          <input type="number" class="product__desc__quantity__inp" value="1" />
           <div class="product__desc__quantity__tools">
-            <button>
+            <button class="iconAnimation">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="12"
-                height="16"
-                viewBox="0 0 12 16"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                width="16px"
+                height="16px"
+                viewBox="0 0 459 459"
+                style="enable-background:new 0 0 459 459;"
+                xml:space="preserve"
               >
-                <image
-                  id="icon__delete"
-                  width="12"
-                  height="16"
-                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAABHNCSVQICAgIfAhkiAAAAH9JREFUKJHt0rEJwlAUheHvSQoHsNIFLHQGxxDcyiGCe2QESbC3EhzAQsKz8EUwINwmnac653J+uMVJvrXFfnQ7oRtCwhGrkndYjIA7muKvCS3WYmpTMZtAOaNLqPAMAD2qWfCVj/7AZEAOdvMA9LgEgDPvtcISB8x/lB+ocXsBa/ITHfqY86EAAAAASUVORK5CYII="
-                />
+                <g>
+                  <g>
+                    <g id="delete">
+                      <path
+                        d="M76.5,408c0,28.05,22.95,51,51,51h204c28.05,0,51-22.95,51-51V102h-306V408z M408,25.5h-89.25L293.25,0h-127.5l-25.5,25.5    H51v51h357V25.5z"
+                        class="active-path"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
               </svg>
             </button>
-            <button>
+            <button class="iconAnimation">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                width="16px"
+                height="16px"
+                viewBox="0 0 528.899 528.899"
+                style="enable-background:new 0 0 528.899 528.899;"
+                xml:space="preserve"
               >
-                <defs>
-                  <image
-                    width="16"
-                    height="16"
-                    id="img1"
-                    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAGBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+k/ojQAAACB0Uk5TAAJtJaH/5ygn8iSQKjlloumaAaOJmaSYA5dzhJY/fGgPOgO/AAAAWUlEQVR4nHXJ1xKAIAxE0SAGe+8N//8vBZwh0Rn27dwFoIlIAp+IUSU8pBmiyukvysqU2rvB1pSuJ6Mp0ntAuxG+nvw/Oy8hr6+3kGH/GQ7rk+wCN1xa39wPNM8FEVHKqLsAAAAASUVORK5CYII="
-                  />
-                </defs>
-                <style>
-                  tspan {
-                    white-space: pre;
-                  }
-                </style>
-                <g id="Header">
-                  <g id="header__basket">
-                    <g id="basket__drop">
-                      <g id="prod-1">
-                        <g id="Szczegoly">
-                          <use id="icon__edit" href="#img1" x="0" y="0" />
-                        </g>
-                      </g>
-                    </g>
+                <g>
+                  <g>
+                    <path
+                      d="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z"
+                      class="active-path"
+                    />
                   </g>
                 </g>
               </svg>
@@ -314,7 +340,6 @@
         </div>
       </div>
     </div>
-    <!-- product 2 -->
     <div class="product">
       <img class="product__img" src="/img/products/2.png" alt="product img" />
       <div class="product__desc">
@@ -322,55 +347,57 @@
           biustonosz push-up line mos 12
         </p>
         <p class="product__desc__price">79.00 zł</p>
+        <span class="product__desc__price--sale">109.00zł</span>
         <div class="product__desc__quantity">
           <p class="product__desc__quantity__txt">ilość:</p>
-          <input type="number" class="product__desc__quantity__inp" />
+          <input type="number" class="product__desc__quantity__inp" value="2" />
           <div class="product__desc__quantity__tools">
-            <button>
+            <button class="iconAnimation">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="12"
-                height="16"
-                viewBox="0 0 12 16"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                width="16px"
+                height="16px"
+                viewBox="0 0 459 459"
+                style="enable-background:new 0 0 459 459;"
+                xml:space="preserve"
               >
-                <image
-                  id="icon__delete"
-                  width="12"
-                  height="16"
-                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAABHNCSVQICAgIfAhkiAAAAH9JREFUKJHt0rEJwlAUheHvSQoHsNIFLHQGxxDcyiGCe2QESbC3EhzAQsKz8EUwINwmnac653J+uMVJvrXFfnQ7oRtCwhGrkndYjIA7muKvCS3WYmpTMZtAOaNLqPAMAD2qWfCVj/7AZEAOdvMA9LgEgDPvtcISB8x/lB+ocXsBa/ITHfqY86EAAAAASUVORK5CYII="
-                />
+                <g>
+                  <g>
+                    <g id="delete">
+                      <path
+                        d="M76.5,408c0,28.05,22.95,51,51,51h204c28.05,0,51-22.95,51-51V102h-306V408z M408,25.5h-89.25L293.25,0h-127.5l-25.5,25.5    H51v51h357V25.5z"
+                        class="active-path"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
               </svg>
             </button>
-            <button>
+            <button class="iconAnimation">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                width="16"
-                height="16"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                width="16px"
+                height="16px"
+                viewBox="0 0 528.899 528.899"
+                style="enable-background:new 0 0 528.899 528.899;"
+                xml:space="preserve"
               >
-                <defs>
-                  <image
-                    width="16"
-                    height="16"
-                    id="img1"
-                    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAGBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+k/ojQAAACB0Uk5TAAJtJaH/5ygn8iSQKjlloumaAaOJmaSYA5dzhJY/fGgPOgO/AAAAWUlEQVR4nHXJ1xKAIAxE0SAGe+8N//8vBZwh0Rn27dwFoIlIAp+IUSU8pBmiyukvysqU2rvB1pSuJ6Mp0ntAuxG+nvw/Oy8hr6+3kGH/GQ7rk+wCN1xa39wPNM8FEVHKqLsAAAAASUVORK5CYII="
-                  />
-                </defs>
-                <style>
-                  tspan {
-                    white-space: pre;
-                  }
-                </style>
-                <g id="Header">
-                  <g id="header__basket">
-                    <g id="basket__drop">
-                      <g id="prod-1">
-                        <g id="Szczegoly">
-                          <use id="icon__edit" href="#img1" x="0" y="0" />
-                        </g>
-                      </g>
-                    </g>
+                <g>
+                  <g>
+                    <path
+                      d="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981   c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611   C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069   L27.473,390.597L0.3,512.69z"
+                      class="active-path"
+                    />
                   </g>
                 </g>
               </svg>
@@ -385,16 +412,16 @@
 </div>
 
 
-    <!--  -->
+   
     <section class="component">
   <div class="wrapper">
     <div class="emptyPage"></div>
   </div>
 </section>
 
-    <script src="js/app.js" type="text/javascript"></script>
-    <script src="js/search.js" type="text/javascript"></script>
-    <script src="js/basketMenu.js" type="text/javascript"></script>
-    <script src="js/navBar.js" type="text/javascript"></script>
-  </body>
+    <script src="js/modules/search.js" type="text/javascript"></script>
+    <script src="js/modules/basketMenu.js" type="text/javascript"></script>
+    <script src="js/modules/navBar.js" type="text/javascript"></script>
+
+
 </html>

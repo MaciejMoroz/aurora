@@ -30,8 +30,10 @@ gulp.task('js', () =>
     .pipe(babel({
       presets: ['@babel/env']
     }))
-    .pipe(gulp.dest('./web/js/'))
+    .pipe(gulp.dest('./web/js/modules/'))
 );
+
+
 
 
 gulp.task('nunjucks', function () {

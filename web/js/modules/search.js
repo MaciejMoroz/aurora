@@ -7,10 +7,20 @@ var BODY = document.querySelector('body'),
 
 searchIcon.onclick = function () {
   BODY.classList.toggle('open-searchBox');
-  closeBtnn.classList.remove('rotate');
+  closeBtn.classList.remove('rotate');
 };
 
 closeBtn.onclick = function () {
   BODY.classList.toggle('open-searchBox');
   closeBtn.classList.toggle('rotate');
 };
+
+var windowSize = function windowSize() {
+  var currentSize = window.innerWidth;
+
+  if (currentSize > 1100) {
+    BODY.classList.remove('open-searchBox');
+  }
+};
+
+window.addEventListener("resize", windowSize);

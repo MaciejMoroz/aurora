@@ -75,7 +75,7 @@ input {
   background: none;
   padding: 0;
   &:focus {
-    box-shadow: 0 3px 5px $color-5;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.75);
   }
   outline-color: $color-5;
 }
@@ -129,10 +129,6 @@ button {
     border-right: 1px solid $color-4;
   }
 
-  &:hover {
-    background-position: 0;
-    color: $color-5; /*For IE*/
-  }
   &__close {
     cursor: pointer;
     &--1,

@@ -9,13 +9,24 @@
   &__btn {
     font-size: 10%;
   }
+  &__acc {
+    display: flex;
+    flex-wrap: nowrap;
+    &__btn {
+      white-space: nowrap;
+    }
+  }
   &__contact {
     .link {
       position: relative;
-      margin: 0 $base-unit 0 0;
+      margin: 0;
+      @media (min-width: 420px) {
+        margin: 0 $base-unit 0 0;
+      }
       &__content {
         display: none;
-        @media (min-width: 580px) {
+
+        @media (min-width: 623px) {
           display: unset;
         }
       }
@@ -26,10 +37,10 @@
         }
         .topBar__svg--email {
           position: relative;
-          animation: send 0.55s;
+          animation: send 0.95s;
         }
         .link__animation-line {
-          animation: send-line 0.5s;
+          animation: send-line 0.9s;
         }
       }
       &__animation-line {

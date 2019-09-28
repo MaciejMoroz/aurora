@@ -2,21 +2,19 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
 
 // global
-@import "common/_reset.scss";
-@import "common/_variables.scss";
-@import "common/_mixins.scss";
-@import "common/_global.scss";
-@import "common/_keyframes.scss";
+@import "base/_reset.scss";
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+@import "base/_global.scss";
+@import "base/_animations.scss";
 
 // addons
 
 // modules
-
 // ** header
 @import "components/header/topBar.scss";
 @import "components/header/mainBar.scss";
 @import "components/header/navBar.scss";
-
+@import "components/basketMenu/basketMenu.scss";
 // ** others
-@import "basketMenu.scss";
-@import "whiteSpace.scss";
+@import "components/whiteSpace.scss";
