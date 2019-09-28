@@ -284,8 +284,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    color: #fff;
-    /*For IE*/ }
+    color: #fff; }
     .btn-animation:after {
       content: "";
       position: absolute;
@@ -302,12 +301,10 @@ button {
       transition: 1s, font-size 0.2s; }
     .btn-animation:hover, .btn-animation:hover:after {
       background-position: 0;
-      color: #ecc7d0;
-      /*For IE*/ } }
+      color: #ecc7d0; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .btn-animation {
-    /* IE10+ CSS styles go here */
     padding: 8px 16px;
     border-radius: 4px;
     cursor: pointer;
@@ -315,8 +312,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    color: #000;
-    /*For IE*/ }
+    color: #000; }
     .btn-animation:after {
       content: "";
       position: absolute;
@@ -333,8 +329,7 @@ button {
       transition: 1s, font-size 0.2s; }
     .btn-animation:hover, .btn-animation:hover:after {
       background-position: 0;
-      color: #ecc7d0;
-      /*For IE*/ } }
+      color: #ecc7d0; } }
 
 @-webkit-keyframes shake {
   0% {
@@ -911,6 +906,9 @@ button {
       margin-top: 14px; }
     .nav-menu__second-lvl li:last-child {
       margin-bottom: 14px; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .nav-menu__second-lvl li:hover {
+        width: 350px; } }
     .nav-menu__second-lvl li:hover .nav-menu__third-lvl {
       height: auto; }
       @media (min-width: 1100px) {
@@ -937,6 +935,9 @@ button {
         top: -17px; }
         .nav-menu__third-lvl a {
           padding: 14px 28px; } }
+    @media (min-width: 1100px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .nav-menu__third-lvl {
+        left: 50%; } }
 
 .basket__content {
   background-color: #fff;
