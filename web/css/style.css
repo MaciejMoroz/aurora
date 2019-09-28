@@ -210,6 +210,9 @@ button {
     .hide-mob {
       display: unset; } }
 
+.hidden {
+  display: none; }
+
 .line {
   display: block;
   height: 1px;

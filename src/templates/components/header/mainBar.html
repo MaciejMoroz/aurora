@@ -30,12 +30,17 @@
           </svg>
         </div>
         <div class="mainBar__content__tools__searchBox" data-search-box>
+          <label for="search" class="hidden">Search: </label>
           <input
+            name="search"
             type="text"
             placeholder="co chcesz kupic?"
             class="inpt mainBar__content__tools__searchBox__searchInput"
           />
-          <button class="inpt mainBar__content__tools__searchBox__searchBtn">
+          <button
+            class="inpt mainBar__content__tools__searchBox__searchBtn"
+            aria-label="search"
+          >
             <svg
               class="mainBar__content__tools__search__iconBtn"
               xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +55,7 @@
               />
             </svg>
           </button>
-          <button class="btn__close" data-closeBtn>
+          <button class="btn__close" data-closeBtn aria-label="close">
             <span class="btn__close--1"></span>
             <span class="btn__close--2"></span>
           </button>

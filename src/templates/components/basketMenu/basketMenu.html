@@ -1,7 +1,11 @@
 <div class="basket">
   <div class="basket__content shadow">
     <div class="basket__content__hdr">
-      <button class="btn__close basket__close" data-closeBasketBtn>
+      <button
+        class="btn__close basket__close"
+        aria-label="close"
+        data-closeBasketBtn
+      >
         <span class="btn__close--1"></span>
         <span class="btn__close--2"></span>
       </button>
@@ -27,9 +31,15 @@
         <p class="product__desc__price">59.00 zł</p>
         <div class="product__desc__quantity">
           <p class="product__desc__quantity__txt">ilość:</p>
-          <input type="number" class="product__desc__quantity__inp" value="1" />
+          <label for="quantity" class="hidden">quantity value</label>
+          <input
+            name="quantity"
+            type="number"
+            class="product__desc__quantity__inp"
+            value="1"
+          />
           <div class="product__desc__quantity__tools">
-            <button class="iconAnimation">
+            <button class="iconAnimation" aria-label="delete">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -55,7 +65,7 @@
                 </g>
               </svg>
             </button>
-            <button class="iconAnimation">
+            <button class="iconAnimation" aria-label="edit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -93,9 +103,15 @@
         <span class="product__desc__price--sale">109.00zł</span>
         <div class="product__desc__quantity">
           <p class="product__desc__quantity__txt">ilość:</p>
-          <input type="number" class="product__desc__quantity__inp" value="2" />
+          <label for="quantity2" class="hidden">quantity value</label>
+          <input
+            name="quantity2"
+            type="number"
+            class="product__desc__quantity__inp"
+            value="2"
+          />
           <div class="product__desc__quantity__tools">
-            <button class="iconAnimation">
+            <button class="iconAnimation" aria-label="delete">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -121,7 +137,7 @@
                 </g>
               </svg>
             </button>
-            <button class="iconAnimation">
+            <button class="iconAnimation" aria-label="edit">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
