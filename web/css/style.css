@@ -827,12 +827,12 @@ button {
       -webkit-transition: 0.3s;
       transition: 0.3s; }
 
-.nav-menu {
+.nav-menu2 {
   position: fixed;
   right: -400px;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
-  .open-navMenu .nav-menu {
+  .open-navMenu .nav-menu2 {
     right: 0;
     position: absolute;
     height: auto;
@@ -840,7 +840,7 @@ button {
     -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
             box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); }
   @media (min-width: 1100px) {
-    .nav-menu {
+    .nav-menu2 {
       position: static;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -851,93 +851,75 @@ button {
           -ms-flex-pack: justify;
               justify-content: space-between;
       white-space: nowrap; } }
-  .nav-menu__main {
+  .nav-menu2__third-lvl, .nav-menu2__second-lvl,
+  .nav-menu2 input[type="checkbox"] {
+    display: none; }
+  .nav-menu2__main input:checked ~ .nav-menu2__second-lvl,
+  .nav-menu2 .nav-menu2__second-lvl input:checked ~ ul {
+    display: block; }
+  .nav-menu2__main {
     z-index: 999;
     position: relative;
     text-transform: uppercase;
     font-weight: 700; }
-    .nav-menu__main a {
+    .nav-menu2__main a {
       display: block;
       height: 43px;
       width: 100%;
       padding-top: 14px;
       padding-left: 28px;
       padding-right: 56px; }
-      .nav-menu__main a:hover {
-        background-color: #f7f7f7; }
+    .nav-menu2__main label {
+      display: block;
+      height: 43px;
+      width: 100%; }
     @media (min-width: 1100px) {
-      .nav-menu__main {
+      .nav-menu2__main {
         display: inline-block; }
-        .nav-menu__main a {
+        .nav-menu2__main a {
           padding: 14px; } }
-    .nav-menu__main:hover {
-      height: auto; }
-      .nav-menu__main:hover .nav-menu__second-lvl {
-        height: auto; }
-        @media (min-width: 1100px) {
-          .nav-menu__main:hover .nav-menu__second-lvl {
-            display: block;
-            -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
-                    box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); } }
-  .nav-menu__second-lvl {
+  .nav-menu2__second-lvl {
     font-weight: 400;
     z-index: 999;
-    height: 0;
-    overflow: hidden;
     text-transform: none;
     background-color: #fff; }
-    .nav-menu__second-lvl a {
+    .nav-menu2__second-lvl a,
+    .nav-menu2__second-lvl label {
       padding-top: 14px;
-      padding-left: 56px;
+      padding-left: 28px;
       padding-right: 28px; }
     @media (min-width: 1100px) {
-      .nav-menu__second-lvl {
+      .nav-menu2__second-lvl {
         position: absolute;
         overflow: unset;
         top: 33.6px;
         display: none;
         border: 3px solid #eeeeee; }
-        .nav-menu__second-lvl a {
+        .nav-menu2__second-lvl a {
           padding: 14px 28px; } }
     @media (min-width: 1100px) {
-      .nav-menu__second-lvl ul {
+      .nav-menu2__second-lvl ul {
         margin: 14px 0; } }
-    .nav-menu__second-lvl li:first-child {
+    .nav-menu2__second-lvl li:first-child {
       margin-top: 14px; }
-    .nav-menu__second-lvl li:last-child {
+    .nav-menu2__second-lvl li:last-child {
       margin-bottom: 14px; }
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .nav-menu__second-lvl li:hover {
-        width: 350px; } }
-    .nav-menu__second-lvl li:hover .nav-menu__third-lvl {
-      height: auto; }
-      @media (min-width: 1100px) {
-        .nav-menu__second-lvl li:hover .nav-menu__third-lvl {
-          -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
-                  box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
-          display: block; } }
-  .nav-menu__third-lvl {
+  .nav-menu2__third-lvl {
     z-index: 999;
-    height: 0;
     width: 100%;
     overflow: hidden;
     text-transform: none;
     background-color: #fff; }
-    .nav-menu__third-lvl a {
+    .nav-menu2__third-lvl a {
       padding: 14px 0 0 84px; }
     @media (min-width: 1100px) {
-      .nav-menu__third-lvl {
+      .nav-menu2__third-lvl {
         border: 3px solid #eeeeee;
-        height: auto;
-        display: none;
         position: absolute;
         left: 100%;
         top: -17px; }
-        .nav-menu__third-lvl a {
+        .nav-menu2__third-lvl a {
           padding: 14px 28px; } }
-    @media (min-width: 1100px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .nav-menu__third-lvl {
-        left: 50%; } }
 
 .basket__content {
   background-color: #fff;

@@ -1,4 +1,4 @@
-.nav-menu {
+.nav-menu2 {
   position: fixed;
   right: -400px;
   transition: 0.3s;
@@ -17,6 +17,20 @@
     justify-content: space-between;
     white-space: nowrap;
   }
+
+  // colapse
+  &__third-lvl,
+  &__second-lvl,
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  &__main input:checked ~ .nav-menu2__second-lvl,
+  .nav-menu2__second-lvl input:checked ~ ul {
+    display: block;
+  }
+  // colapse end
+
   &__main {
     z-index: 999;
     position: relative;
@@ -30,9 +44,11 @@
       padding-top: $base-unit;
       padding-left: $space;
       padding-right: $space * 2;
-      &:hover {
-        background-color: $color-8;
-      }
+    }
+    label {
+      display: block;
+      height: 43px;
+      width: 100%;
     }
 
     @media (min-width: 1100px) {
@@ -41,27 +57,18 @@
         padding: $base-unit;
       }
     }
-    &:hover {
-      height: auto;
-      .nav-menu__second-lvl {
-        height: auto;
-        @media (min-width: 1100px) {
-          display: block;
-          box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
-        }
-      }
-    }
   }
+
   &__second-lvl {
     font-weight: $fw-normal;
     z-index: 999;
-    height: 0;
-    overflow: hidden;
+
     text-transform: none;
     background-color: $color-2;
-    a {
+    a,
+    label {
       padding-top: $base-unit;
-      padding-left: $space * 2;
+      padding-left: $space;
       padding-right: $space;
     }
 
@@ -89,22 +96,9 @@
         margin-bottom: $base-unit;
       }
     }
-    li:hover {
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        width: 350px;
-      }
-      .nav-menu__third-lvl {
-        height: auto;
-        @media (min-width: 1100px) {
-          box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
-          display: block;
-        }
-      }
-    }
   }
   &__third-lvl {
     z-index: 999;
-    height: 0;
     width: 100%;
     overflow: hidden;
     text-transform: none;
@@ -115,8 +109,6 @@
 
     @media (min-width: 1100px) {
       border: 3px solid $color-6;
-      height: auto;
-      display: none;
       position: absolute;
       left: 100%;
       top: -17px;
@@ -124,10 +116,6 @@
       a {
         padding: $base-unit $space;
       }
-    }
-    @media (min-width: 1100px) and (-ms-high-contrast: none),
-      (-ms-high-contrast: active) {
-      left: 50%;
     }
   }
 }
