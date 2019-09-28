@@ -21,6 +21,7 @@
     z-index: 999;
     position: relative;
     text-transform: uppercase;
+    font-weight: $fw-bold;
 
     a {
       display: block;
@@ -52,6 +53,7 @@
     }
   }
   &__second-lvl {
+    font-weight: $fw-normal;
     z-index: 999;
     height: 0;
     overflow: hidden;

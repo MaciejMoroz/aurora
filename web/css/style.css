@@ -848,7 +848,8 @@ button {
   .nav-menu__main {
     z-index: 999;
     position: relative;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 700; }
     .nav-menu__main a {
       display: block;
       height: 43px;
@@ -873,6 +874,7 @@ button {
             -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
                     box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); } }
   .nav-menu__second-lvl {
+    font-weight: 400;
     z-index: 999;
     height: 0;
     overflow: hidden;
