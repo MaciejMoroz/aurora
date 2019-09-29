@@ -29,6 +29,7 @@
   .nav-menu__second-lvl input:checked ~ ul {
     display: block;
   }
+
   @media (min-width: 1100px) {
     & {
       div:hover {

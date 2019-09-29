@@ -316,7 +316,7 @@ button {
         -webkit-transition: 1s, font-size 0.2s;
         transition: 1s, font-size 0.2s; }
     .btn-animation--menu {
-      background: linear-gradient(45deg, #000 50%, #000 50%);
+      background: linear-gradient(45deg, #ecc7d0 50%, #000 50%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
       .btn-animation--menu, .btn-animation--menu:after {
@@ -325,7 +325,7 @@ button {
         -webkit-transition: 1s, font-size 0.2s;
         transition: 1s, font-size 0.2s; }
       .btn-animation--menu:hover, .btn-animation--menu:hover:after {
-        color: #000; } }
+        color: #ecc7d0; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .btn-animation {
