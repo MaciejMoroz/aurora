@@ -301,35 +301,48 @@ button {
       transition: 1s, font-size 0.2s; }
     .btn-animation:hover, .btn-animation:hover:after {
       background-position: 0;
-      color: #ecc7d0; } }
+      color: #ecc7d0; }
+    .btn-animation--main {
+      background: linear-gradient(45deg, #000 50%, #fff 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+      .btn-animation--main:after {
+        content: "";
+        background: linear-gradient(45deg, transparent 50%, #ea2260 50%); }
+      .btn-animation--main, .btn-animation--main:after {
+        background-size: 300%;
+        background-position: 100%;
+        -webkit-transition: 1s, font-size 0.2s;
+        transition: 1s, font-size 0.2s; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .btn-animation {
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
     background: linear-gradient(45deg, #f7f7f7 50%, #fff 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     color: #000; }
-    .btn-animation:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(45deg, #f7f7f7 50%, transparent 50%);
-      z-index: -1; }
     .btn-animation, .btn-animation:after {
       background-size: 300%;
       background-position: 100%;
       -webkit-transition: 1s, font-size 0.2s;
       transition: 1s, font-size 0.2s; }
-    .btn-animation:hover, .btn-animation:hover:after {
-      background-position: 0;
-      color: #ecc7d0; } }
+    .btn-animation--main {
+      background: linear-gradient(45deg, #fff 50%, #ea2260 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #fff; }
+      .btn-animation--main:after {
+        content: "";
+        background: linear-gradient(45deg, transparent 50%, #ea2260 50%); }
+      .btn-animation--main, .btn-animation--main:after {
+        background-size: 300%;
+        background-position: 100%;
+        -webkit-transition: 1s, font-size 0.2s;
+        transition: 1s, font-size 0.2s; }
+      .btn-animation--main:hover, .btn-animation--main:hover:after {
+        background-position: 0;
+        color: #000; } }
 
 @-webkit-keyframes shake {
   0% {
@@ -827,12 +840,12 @@ button {
       -webkit-transition: 0.3s;
       transition: 0.3s; }
 
-.nav-menu2 {
+.nav-menu {
   position: fixed;
   right: -400px;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
-  .open-navMenu .nav-menu2 {
+  .open-navMenu .nav-menu {
     right: 0;
     position: absolute;
     height: auto;
@@ -840,7 +853,7 @@ button {
     -webkit-box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75);
             box-shadow: -2px 9px 25px -4px rgba(0, 0, 0, 0.75); }
   @media (min-width: 1100px) {
-    .nav-menu2 {
+    .nav-menu {
       position: static;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -851,74 +864,84 @@ button {
           -ms-flex-pack: justify;
               justify-content: space-between;
       white-space: nowrap; } }
-  .nav-menu2__third-lvl, .nav-menu2__second-lvl,
-  .nav-menu2 input[type="checkbox"] {
+  .nav-menu__third-lvl, .nav-menu__second-lvl,
+  .nav-menu input[type="checkbox"] {
     display: none; }
-  .nav-menu2__main input:checked ~ .nav-menu2__second-lvl,
-  .nav-menu2 .nav-menu2__second-lvl input:checked ~ ul {
+  .nav-menu__main input:checked ~ .nav-menu__second-lvl,
+  .nav-menu .nav-menu__second-lvl input:checked ~ ul {
     display: block; }
-  .nav-menu2__main {
+  @media (min-width: 1100px) {
+    .nav-menu div:hover .nav-menu__second-lvl {
+      display: block; }
+    .nav-menu__second-lvl div:hover .nav-menu__third-lvl {
+      display: block; } }
+  .nav-menu__main {
     z-index: 999;
     position: relative;
     text-transform: uppercase;
     font-weight: 700; }
-    .nav-menu2__main a {
+    .nav-menu__main a {
       display: block;
       height: 43px;
       width: 100%;
       padding-top: 14px;
       padding-left: 28px;
       padding-right: 56px; }
-    .nav-menu2__main label {
+    .nav-menu__main label {
       display: block;
       height: 43px;
-      width: 100%; }
+      width: 100%;
+      padding-top: 14px;
+      padding-left: 28px;
+      padding-right: 56px; }
     @media (min-width: 1100px) {
-      .nav-menu2__main {
+      .nav-menu__main {
         display: inline-block; }
-        .nav-menu2__main a {
+        .nav-menu__main a,
+        .nav-menu__main label {
           padding: 14px; } }
-  .nav-menu2__second-lvl {
+  .nav-menu__second-lvl {
     font-weight: 400;
     z-index: 999;
     text-transform: none;
     background-color: #fff; }
-    .nav-menu2__second-lvl a,
-    .nav-menu2__second-lvl label {
+    .nav-menu__second-lvl a,
+    .nav-menu__second-lvl label {
       padding-top: 14px;
-      padding-left: 28px;
+      padding-left: 42px;
       padding-right: 28px; }
     @media (min-width: 1100px) {
-      .nav-menu2__second-lvl {
+      .nav-menu__second-lvl {
         position: absolute;
-        overflow: unset;
         top: 33.6px;
-        display: none;
         border: 3px solid #eeeeee; }
-        .nav-menu2__second-lvl a {
+        .nav-menu__second-lvl a,
+        .nav-menu__second-lvl label {
           padding: 14px 28px; } }
     @media (min-width: 1100px) {
-      .nav-menu2__second-lvl ul {
+      .nav-menu__second-lvl ul {
         margin: 14px 0; } }
-    .nav-menu2__second-lvl li:first-child {
+    .nav-menu__second-lvl li:first-child {
       margin-top: 14px; }
-    .nav-menu2__second-lvl li:last-child {
+    .nav-menu__second-lvl li:last-child {
       margin-bottom: 14px; }
-  .nav-menu2__third-lvl {
+  .nav-menu__third-lvl {
     z-index: 999;
     width: 100%;
     overflow: hidden;
     text-transform: none;
     background-color: #fff; }
-    .nav-menu2__third-lvl a {
-      padding: 14px 0 0 84px; }
+    .nav-menu__third-lvl a,
+    .nav-menu__third-lvl label {
+      padding: 14px 0 0 56px; }
     @media (min-width: 1100px) {
-      .nav-menu2__third-lvl {
+      .nav-menu__third-lvl {
         border: 3px solid #eeeeee;
         position: absolute;
         left: 100%;
         top: -17px; }
-        .nav-menu2__third-lvl a {
+        .nav-menu__third-lvl a,
+        .nav-menu__third-lvl label {
           padding: 14px 28px; } }
 
 .basket__content {
@@ -1014,7 +1037,3 @@ button {
   right: 14px;
   top: 28px;
   height: 20px; }
-
-.emptyPage {
-  width: 100%;
-  height: 2000px; }

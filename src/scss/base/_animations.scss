@@ -63,42 +63,59 @@
     &:hover,
     &:hover:after {
       background-position: 0;
-
       color: $color-5;
+    }
+    &--main {
+      background: linear-gradient(45deg, $color-1 50%, $color-2 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &:after {
+        content: "";
+        background: linear-gradient(45deg, transparent 50%, $color-3 50%);
+      }
+
+      &,
+      &:after {
+        background-size: 300%;
+        background-position: 100%;
+        transition: 1s, font-size 0.2s;
+      }
     }
   }
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
     background: linear-gradient(45deg, $color-8 50%, $color-2 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
-    color: #000;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(45deg, $color-8 50%, transparent 50%);
-      z-index: -1;
-    }
-
+    color: $color-1;
     &,
     &:after {
       background-size: 300%;
       background-position: 100%;
       transition: 1s, font-size 0.2s;
     }
+    &--main {
+      background: linear-gradient(45deg, $color-2 50%, $color-3 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: $color-2;
 
-    &:hover,
-    &:hover:after {
-      background-position: 0;
-      color: $color-5;
+      &:after {
+        content: "";
+        background: linear-gradient(45deg, transparent 50%, $color-3 50%);
+      }
+
+      &,
+      &:after {
+        background-size: 300%;
+        background-position: 100%;
+        transition: 1s, font-size 0.2s;
+      }
+      &:hover,
+      &:hover:after {
+        background-position: 0;
+        color: $color-1;
+      }
     }
   }
 }
