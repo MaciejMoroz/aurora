@@ -64,6 +64,7 @@
     &:hover:after {
       background-position: 0;
       color: $color-5;
+      font-weight: $fw-bold;
     }
     &--main {
       background: linear-gradient(45deg, $color-1 50%, $color-2 50%);
@@ -79,6 +80,21 @@
         background-size: 300%;
         background-position: 100%;
         transition: 1s, font-size 0.2s;
+      }
+    }
+    &--menu {
+      background: linear-gradient(45deg, $color-1 50%, $color-1 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      &,
+      &:after {
+        background-size: 300%;
+        background-position: 100%;
+        transition: 1s, font-size 0.2s;
+      }
+      &:hover,
+      &:hover:after {
+        color: $color-1;
       }
     }
   }

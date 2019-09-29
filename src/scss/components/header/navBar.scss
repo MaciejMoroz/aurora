@@ -90,6 +90,10 @@
       padding-left: $space * 1.5;
       padding-right: $space;
     }
+    a:hover,
+    label:hover {
+      color: $color-1;
+    }
 
     @media (min-width: 1100px) {
       position: absolute;
@@ -124,6 +128,10 @@
     a,
     label {
       padding: $base-unit 0 0 $space * 2;
+    }
+    a:hover,
+    label:hover {
+      color: $color-5;
     }
 
     @media (min-width: 1100px) {

@@ -301,7 +301,8 @@ button {
       transition: 1s, font-size 0.2s; }
     .btn-animation:hover, .btn-animation:hover:after {
       background-position: 0;
-      color: #ecc7d0; }
+      color: #ecc7d0;
+      font-weight: 700; }
     .btn-animation--main {
       background: linear-gradient(45deg, #000 50%, #fff 50%);
       -webkit-background-clip: text;
@@ -313,7 +314,18 @@ button {
         background-size: 300%;
         background-position: 100%;
         -webkit-transition: 1s, font-size 0.2s;
-        transition: 1s, font-size 0.2s; } }
+        transition: 1s, font-size 0.2s; }
+    .btn-animation--menu {
+      background: linear-gradient(45deg, #000 50%, #000 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+      .btn-animation--menu, .btn-animation--menu:after {
+        background-size: 300%;
+        background-position: 100%;
+        -webkit-transition: 1s, font-size 0.2s;
+        transition: 1s, font-size 0.2s; }
+      .btn-animation--menu:hover, .btn-animation--menu:hover:after {
+        color: #000; } }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .btn-animation {
@@ -910,6 +922,9 @@ button {
       padding-top: 14px;
       padding-left: 42px;
       padding-right: 28px; }
+    .nav-menu__second-lvl a:hover,
+    .nav-menu__second-lvl label:hover {
+      color: #000; }
     @media (min-width: 1100px) {
       .nav-menu__second-lvl {
         position: absolute;
@@ -934,6 +949,9 @@ button {
     .nav-menu__third-lvl a,
     .nav-menu__third-lvl label {
       padding: 14px 0 0 56px; }
+    .nav-menu__third-lvl a:hover,
+    .nav-menu__third-lvl label:hover {
+      color: #ecc7d0; }
     @media (min-width: 1100px) {
       .nav-menu__third-lvl {
         border: 3px solid #eeeeee;
@@ -1037,3 +1055,8 @@ button {
   right: 14px;
   top: 28px;
   height: 20px; }
+
+.emptyPage {
+  width: 100%;
+  height: 2000px;
+  color: white; }
